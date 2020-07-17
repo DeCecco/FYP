@@ -1,0 +1,13 @@
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Main Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list *ngFor="let val of menu">
+      <ion-item>{{val.label}}</ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
