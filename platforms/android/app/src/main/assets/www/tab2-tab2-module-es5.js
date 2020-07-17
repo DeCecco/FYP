@@ -1,3 +1,7 @@
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tab2-tab2-module"], {
@@ -17,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\r\n  <ion-toolbar>\r\n    <ion-title>\r\n      Tab 2\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header collapse=\"condense\">\r\n    <ion-toolbar>\r\n      <ion-title size=\"large\">Tab 2</ion-title>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n\r\n  <app-explore-container name=\"Tab 2 page\"></app-explore-container>\r\n</ion-content>\r\n";
+    __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\r\n  <ion-toolbar>\r\n    <ion-title>\r\n      Tab 2\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header collapse=\"condense\">\r\n    <ion-toolbar>\r\n      <ion-title size=\"large\">Tab 2</ion-title>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n  <ion-button (click)=\"cam()\">Camera!</ion-button>\r\n  <app-explore-container name=\"Tab 2 page\"></app-explore-container>\r\n</ion-content>\r\n";
     /***/
   },
 
@@ -211,9 +215,46 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
 
-    var Tab2Page = function Tab2Page() {
-      _classCallCheck(this, Tab2Page);
+
+    var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic-native/camera/ngx */
+    "./node_modules/@ionic-native/camera/__ivy_ngcc__/ngx/index.js");
+
+    var Tab2Page = /*#__PURE__*/function () {
+      function Tab2Page(camera) {
+        _classCallCheck(this, Tab2Page);
+
+        this.camera = camera;
+      }
+
+      _createClass(Tab2Page, [{
+        key: "cam",
+        value: function cam() {
+          console.log("entro a cam");
+          var options = {
+            quality: 100,
+            destinationType: this.camera.DestinationType.FILE_URI,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE
+          };
+          this.camera.getPicture(options).then(function (imageData) {
+            // imageData is either a base64 encoded string or a file URI
+            // If it's base64 (DATA_URL):
+            var base64Image = 'data:image/jpeg;base64,' + imageData;
+          }, function (err) {// Handle error
+          });
+        }
+      }]);
+
+      return Tab2Page;
+    }();
+
+    Tab2Page.ctorParameters = function () {
+      return [{
+        type: _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_2__["Camera"]
+      }];
     };
 
     Tab2Page = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({

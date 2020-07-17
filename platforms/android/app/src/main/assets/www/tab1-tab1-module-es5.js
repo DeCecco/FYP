@@ -17,7 +17,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\r\n  <ion-toolbar>\r\n    <ion-title>\r\n      Tab 1\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header collapse=\"condense\">\r\n    <ion-toolbar>\r\n      <ion-title size=\"large\">Tab 1</ion-title>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n    <ion-button>TestQR</ion-button>\r\n  <app-explore-container name=\"Tab 1 page\"></app-explore-container>\r\n</ion-content>\r\n";
+    __webpack_exports__["default"] = "<ion-header [translucent]=\"true\">\r\n  <ion-toolbar>\r\n    <ion-title>\r\n      Tab 1\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header collapse=\"condense\">\r\n    <ion-toolbar>\r\n      <ion-title size=\"large\">Tab 1</ion-title>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n    <ion-button routerLink=\"/qr\">TestQR</ion-button>\r\n  <app-explore-container name=\"Tab 1 page\"></app-explore-container>\r\n</ion-content>\r\n";
     /***/
   },
 

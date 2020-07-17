@@ -171,6 +171,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/services/qr/qr.component.html":
+  /*!*************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/services/qr/qr.component.html ***!
+    \*************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppServicesQrQrComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<p>\r\n  qr works! malditos\r\n</p>\r\n";
+    /***/
+  },
+
+  /***/
   "./src/app/app-routing.module.ts":
   /*!***************************************!*\
     !*** ./src/app/app-routing.module.ts ***!
@@ -207,6 +227,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _services_qr_qr_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ./services/qr/qr.component */
+    "./src/app/services/qr/qr.component.ts");
 
     var routes = [{
       path: '',
@@ -219,6 +245,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return m.TabsPageModule;
         });
       }
+    }, {
+      path: 'qr',
+      component: _services_qr_qr_component__WEBPACK_IMPORTED_MODULE_3__["QrComponent"]
     }];
 
     var AppRoutingModule = function AppRoutingModule() {
@@ -416,13 +445,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @ionic-native/qr-scanner/ngx */
+    "./node_modules/@ionic-native/qr-scanner/__ivy_ngcc__/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! @ionic-native/vibration/ngx */
+    "./node_modules/@ionic-native/vibration/__ivy_ngcc__/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! @ionic-native/camera/ngx */
+    "./node_modules/@ionic-native/camera/__ivy_ngcc__/ngx/index.js");
+    /* harmony import */
+
+
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ./app-routing.module */
     "./src/app/app-routing.module.ts");
     /* harmony import */
 
 
-    var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./app.component */
     "./src/app/app.component.ts");
 
@@ -431,15 +478,162 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
       entryComponents: [],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"]],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"]],
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_7__["QRScanner"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_8__["Vibration"], _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_9__["Camera"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
       }],
-      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+      bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
     })], AppModule);
+    /***/
+  },
+
+  /***/
+  "./src/app/services/qr/qr.component.scss":
+  /*!***********************************************!*\
+    !*** ./src/app/services/qr/qr.component.scss ***!
+    \***********************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppServicesQrQrComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NlcnZpY2VzL3FyL3FyLmNvbXBvbmVudC5zY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/services/qr/qr.component.ts":
+  /*!*********************************************!*\
+    !*** ./src/app/services/qr/qr.component.ts ***!
+    \*********************************************/
+
+  /*! exports provided: QrComponent */
+
+  /***/
+  function srcAppServicesQrQrComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "QrComponent", function () {
+      return QrComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic-native/qr-scanner/ngx */
+    "./node_modules/@ionic-native/qr-scanner/__ivy_ngcc__/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ionic-native/vibration/ngx */
+    "./node_modules/@ionic-native/vibration/__ivy_ngcc__/ngx/index.js");
+
+    var QrComponent = /*#__PURE__*/function () {
+      function QrComponent(qrScanner, vibration) {
+        _classCallCheck(this, QrComponent);
+
+        this.qrScanner = qrScanner;
+        this.vibration = vibration;
+      }
+
+      _createClass(QrComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.qr(); // this.vibrar();
+        }
+      }, {
+        key: "qr",
+        value: function qr() {
+          var _this2 = this;
+
+          this.qrScanner.prepare().then(function (status) {
+            if (status.authorized) {
+              // camera permission was granted
+              // start scanning
+              console.log("llego hasta aca");
+
+              var scanSub = _this2.qrScanner.scan().subscribe(function (text) {
+                console.log('Scanned something', text);
+
+                _this2.qrScanner.enableLight();
+
+                _this2.qrScanner.hide(); // hide camera preview
+
+
+                scanSub.unsubscribe(); // stop scanning
+              });
+            } else if (status.denied) {// camera permission was permanently denied
+              // you must use QRScanner.openSettings() method to guide the user to the settings page
+              // then they can grant the permission from there
+            } else {// permission was denied, but not permanently. You can ask for permission again at a later time.
+              }
+          })["catch"](function (e) {
+            return console.log('Error is', e);
+          });
+        }
+      }, {
+        key: "vibrar",
+        value: function vibrar() {
+          // Vibrate the device for a second
+          // Duration is ignored on iOS.
+          this.vibration.vibrate(1000); // Vibrate 2 seconds
+          // Pause for 1 second
+          // Vibrate for 2 seconds
+          // Patterns work on Android and Windows only
+
+          this.vibration.vibrate([2000, 1000, 2000]); // Stop any current vibrations immediately
+          // Works on Android and Windows only
+
+          this.vibration.vibrate(0);
+        }
+      }]);
+
+      return QrComponent;
+    }();
+
+    QrComponent.ctorParameters = function () {
+      return [{
+        type: _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_2__["QRScanner"]
+      }, {
+        type: _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_3__["Vibration"]
+      }];
+    };
+
+    QrComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-qr',
+      template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! raw-loader!./qr.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/services/qr/qr.component.html"))["default"],
+      styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! ./qr.component.scss */
+      "./src/app/services/qr/qr.component.scss"))["default"]]
+    })], QrComponent);
     /***/
   },
 

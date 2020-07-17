@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+
+
 
 @Component({
   selector: 'app-qr',
@@ -8,10 +11,11 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner/ngx';
 })
 export class QrComponent implements OnInit {
 
-  constructor(private qrScanner: QRScanner) { }
+  constructor(private qrScanner: QRScanner, private vibration: Vibration ) { }
 
   ngOnInit() {
     this.qr();
+    // this.vibrar();
   }
 
   private qr(){
@@ -22,9 +26,10 @@ export class QrComponent implements OnInit {
 
 
        // start scanning
+       console.log("llego hasta aca");
        let scanSub = this.qrScanner.scan().subscribe((text: string) => {
          console.log('Scanned something', text);
-
+         this.qrScanner.enableLight();
          this.qrScanner.hide(); // hide camera preview
          scanSub.unsubscribe(); // stop scanning
        });
@@ -40,4 +45,21 @@ export class QrComponent implements OnInit {
   .catch((e: any) => console.log('Error is', e));
 
   }
+
+private vibrar() {
+  // Vibrate the device for a second
+// Duration is ignored on iOS.
+this.vibration.vibrate(1000);
+
+// Vibrate 2 seconds
+// Pause for 1 second
+// Vibrate for 2 seconds
+// Patterns work on Android and Windows only
+this.vibration.vibrate([2000,1000,2000]);
+
+// Stop any current vibrations immediately
+// Works on Android and Windows only
+this.vibration.vibrate(0);
+}
+
 }
