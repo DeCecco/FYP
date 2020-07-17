@@ -6,6 +6,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { QRScanner } from '@ionic-native/qr-scanner/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { Camera } from '@ionic-native/camera/ngx';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +21,9 @@ import { AppComponent } from './app.component';
     StatusBar,
     SplashScreen,
     QRScanner,
+    Vibration,
+    Camera,
+    NativeAudio,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
