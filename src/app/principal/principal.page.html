@@ -8,12 +8,30 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Hello, we're working on single implementations yet</ion-card-title>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Keep on touch so we can inform you when we finish the development!
-    </ion-card-content>
-  </ion-card></ion-content>
+  <ion-icon class=" mediumSize green" name="add-circle-outline"></ion-icon>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        Descripcion
+      </ion-col>
+      <ion-col>
+        Tipo
+      </ion-col>
+      <ion-col>
+        Monto
+      </ion-col>
+      <ion-col>
+        Action
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let elem of records">
+      <ion-col>{{elem.description}}</ion-col>
+      <ion-col>{{elem.type}}</ion-col>
+      <ion-col>{{elem.amount}}</ion-col>
+      <ion-col>
+        <ion-icon class=" mediumSize yellow" name="create-outline"></ion-icon>
+        <ion-icon class=" mediumSize red" name="close-circle-outline" (click)="DeleteRecord(elem.id)"></ion-icon>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+</ion-content>

@@ -23,6 +23,11 @@ export class MenuComponent implements OnInit {
     {
       label: "pablo el trolo",
       icon:"gayman"
+    },
+    {
+      label: "Users",
+      icon:"people-outline",
+      link: "/users"
     }
   ]
    }
