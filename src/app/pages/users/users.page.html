@@ -1,9 +1,18 @@
-<ion-header>
+<ion-header translucent>
   <ion-toolbar>
-    <ion-title>users</ion-title>
+    <ion-title>users</ion-title>    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="oneMoreRow();">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-list>
+    <ion-item *ngFor="let elem of records">
+      <ion-label>{{elem.description}} <ion-icon (click)="updateId(elem.id);" class=" mediumSize yellow" name="create-outline"></ion-icon> - <ion-icon class=" mediumSize red" name="close-circle-outline" (click)="DeleteRecord(elem.id)"></ion-icon></ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>

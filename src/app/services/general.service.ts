@@ -62,7 +62,15 @@ export class GeneralService {
       }
     })
   }
-
+  getPath(path){
+   return this.firestore.collection(path).snapshotChanges();
+  }
+  addGeneric(path,data){
+    return this.firestore.collection(path).add(data);
+  }
+  updateGeneric(path,id,data){
+    return this.firestore.doc(path + id).update(data);
+  }
   addByPath(path: string, data: object) {
     let addrecord = {}
     let test = [];
